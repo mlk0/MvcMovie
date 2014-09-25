@@ -44,5 +44,11 @@ namespace MvcMovie.Controllers
         {
             return View();
         }
+
+        public ActionResult YoMan()
+        {
+            //return View("YoMyMan.chhtml");
+            return View("YoMyMan");
+        }
 	}
 }

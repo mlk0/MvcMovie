@@ -16,7 +16,7 @@ namespace MvcMovie.Models.MovieModels
     }
 
 
-    public class MovieDbContext : DbContext
+    public class MovieDBContext : DbContext
     {
         public DbSet<Movie> Movies { get; set; }
     }

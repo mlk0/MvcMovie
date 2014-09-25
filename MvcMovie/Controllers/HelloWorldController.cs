@@ -26,5 +26,23 @@ namespace MvcMovie.Controllers
         {
             return "This is from within he Welcome method";
         }
+
+
+        public string WelcomeParameters(string name, int numIterations = 1) 
+        {
+            return HttpUtility.HtmlEncode(String.Format("Hello {0}, number of iterations is {1}.", name, numIterations));
+        }
+
+
+        public string WelcomeParametersAndId(string name, int id) 
+        {
+            return HttpUtility.HtmlEncode(String.Format("Name: {0}, id={1}",name, id));
+        }
+
+
+        public ActionResult Yo() 
+        {
+            return View();
+        }
 	}
 }

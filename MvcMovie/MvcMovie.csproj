@@ -217,6 +217,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\HelloWorld\Yo.cshtml" />
     <Content Include="Views\HelloWorld\YoMyMan.cshtml" />
+    <Content Include="Views\HelloWorld\Aloha.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

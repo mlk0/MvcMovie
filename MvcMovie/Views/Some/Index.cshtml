@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<p>This is some Index view</p>
+@Html.ActionLink("Create New", "New");  
+
+@Html.ActionLink("Bla Bla", "Yo", "HelloWorld")
+
+or
+@Html.ActionLink("Welcome with params", "WelcomeParametersAndId", "HelloWorld", new { id=10, name ="Cvetko" }, null)
+ 
+

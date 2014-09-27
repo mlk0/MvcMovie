@@ -1,0 +1,35 @@
+﻿@model MvcMovie.Controllers.SampleModel
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{ 
+    
+    @Html.AntiForgeryToken()
+    
+    @Html.HiddenFor(c=>c.SampleId)
+    
+    <p>
+        @Html.DisplayNameFor(c=>c.Name)
+        @Html.DisplayFor(c=>c.Name)
+
+    </p>
+    
+    
+    <p>
+        @Html.LabelFor(c=>c.Name)
+        @Html.EditorFor(c=>c.Name)
+
+    </p>
+    
+    <input type="submit" value="Save"/>
+}
+
+@Html.ActionLink("Cancel Edit", "Index");
+or
+@Html.ActionLink("Go to details", "Details", new { id = Model.SampleId})
+
+

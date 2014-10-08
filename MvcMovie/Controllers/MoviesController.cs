@@ -20,18 +20,35 @@ namespace MvcMovie.Controllers
         //    return View(db.Movies.ToList());
         //}
 
-        public ActionResult Index(string searchCriteria, FormCollection fc, string TitleSearchString, string OtherParameter)
+        public ActionResult Index(string searchCriteria, FormCollection fc, string TitleSearchString, string OtherParameter, string movieGenres)
         {
-            var ss = fc["SearchString"];
-
-                var movies = from m in db.Movies
-                         select m;
-
-            if (!String.IsNullOrEmpty(searchCriteria)) 
-            {
-                movies = db.Movies.Where(c => c.Title.Contains(searchCriteria));
-            }
+            var ss = fc["SearchString"]; //ova e prazno koga e FormMethod.Get a ima vrednosti samo za FormMethod.Post
             
+
+            var movies = from m in db.Movies
+                         select m;
+            
+
+            var distinctGenres = db.Movies.OrderBy(c => c.Genre).Select(c => c.Genre).Distinct();
+            var aa = distinctGenres.ToList();
+
+            var distinctGenres1 = from g in db.Movies
+                                  orderby g.Genre
+                                  select g.Genre;
+            var bb = distinctGenres1.Distinct();
+
+            ViewBag.movieGenres = new SelectList(distinctGenres);
+
+            if (!String.IsNullOrEmpty(TitleSearchString))
+            {
+                movies = movies.Where(c => c.Title.Contains(TitleSearchString));
+            }
+
+            if (!String.IsNullOrEmpty(movieGenres))
+            {
+                movies = movies.Where(c => c.Genre == movieGenres);
+            }
+
             return View(movies);
         }
 
@@ -67,7 +84,7 @@ namespace MvcMovie.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="ID,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public ActionResult Create([Bind(Include = "ID,Title,ReleaseDate,Genre,Price")] Movie movie)
         {
             if (ModelState.IsValid)
             {
@@ -99,7 +116,7 @@ namespace MvcMovie.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="ID,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public ActionResult Edit([Bind(Include = "ID,Title,ReleaseDate,Genre,Price")] Movie movie)
         {
             if (ModelState.IsValid)
             {

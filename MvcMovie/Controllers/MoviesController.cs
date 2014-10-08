@@ -15,9 +15,30 @@ namespace MvcMovie.Controllers
         private MovieDBContext db = new MovieDBContext();
 
         // GET: /Movies/
-        public ActionResult Index()
+        //public ActionResult Index()
+        //{
+        //    return View(db.Movies.ToList());
+        //}
+
+        public ActionResult Index(string searchCriteria, FormCollection fc, string TitleSearchString, string OtherParameter)
         {
-            return View(db.Movies.ToList());
+            var ss = fc["SearchString"];
+
+                var movies = from m in db.Movies
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchCriteria)) 
+            {
+                movies = db.Movies.Where(c => c.Title.Contains(searchCriteria));
+            }
+            
+            return View(movies);
+        }
+
+        [HttpPost]
+        public string Index(FormCollection fc)
+        {
+            return fc["SearchString"];
         }
 
         // GET: /Movies/Details/5

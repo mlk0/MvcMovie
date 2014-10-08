@@ -10,7 +10,7 @@
     @Html.ActionLink("Create New", "Create")
  
     @*@using (Html.BeginForm())*@ 
-    @using(@Html.BeginForm("Index","Movies",FormMethod.Post ))
+    @using(@Html.BeginForm("Index","Movies",FormMethod.Get ))
     { 
         <p>Title: @Html.TextBox("TitleSearchString")</p>
         <input type="text" name="OtherParameter" id="oprm"/>

@@ -20,7 +20,7 @@ namespace MvcMovie.Controllers
         //    return View(db.Movies.ToList());
         //}
 
-        public ActionResult Index(string searchCriteria, FormCollection fc, string TitleSearchString, string OtherParameter, string movieGenres)
+        public ActionResult Index(string searchCriteria, FormCollection fc, string TitleSearchString, string OtherParameter, string movieGenres, string movieRatings)
         {
             var ss = fc["SearchString"]; //ova e prazno koga e FormMethod.Get a ima vrednosti samo za FormMethod.Post
             
@@ -32,12 +32,16 @@ namespace MvcMovie.Controllers
             var distinctGenres = db.Movies.OrderBy(c => c.Genre).Select(c => c.Genre).Distinct();
             var aa = distinctGenres.ToList();
 
+            var distinctRatings = db.Movies.OrderBy(c => c.Rating).Select(c => c.Rating).Distinct();
+
             var distinctGenres1 = from g in db.Movies
                                   orderby g.Genre
                                   select g.Genre;
             var bb = distinctGenres1.Distinct();
 
             ViewBag.movieGenres = new SelectList(distinctGenres);
+
+            ViewBag.movieRatings = new SelectList(distinctRatings);
 
             if (!String.IsNullOrEmpty(TitleSearchString))
             {
@@ -47,6 +51,11 @@ namespace MvcMovie.Controllers
             if (!String.IsNullOrEmpty(movieGenres))
             {
                 movies = movies.Where(c => c.Genre == movieGenres);
+            }
+
+            if (!String.IsNullOrEmpty(movieRatings)) 
+            {
+                movies = movies.Where(c => c.Rating == movieRatings);
             }
 
             return View(movies);

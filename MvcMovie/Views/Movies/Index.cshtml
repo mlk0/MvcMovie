@@ -13,6 +13,7 @@
     @using(@Html.BeginForm("Index","Movies",FormMethod.Get ))
     { 
         <p>Genre: @Html.DropDownList("movieGenres","All")</p>
+        <p>Rating: @Html.DropDownList("movieRatings", "All")</p>
         <p>Title: @Html.TextBox("TitleSearchString")</p>
         <input type="text" name="OtherParameter" id="oprm"/>
         <input type="submit" value="Find"/>

@@ -36,7 +36,8 @@ namespace MvcMovie.Migrations
                     Genre = "Obrazovna Programa",
                     Price = 30,
                     ReleaseDate = new DateTime(1985, 04, 05),
-                    Rating = "G"
+                    Rating = "G",
+                    IsSoldOut = false
                 },
                 new Movie 
                 {
@@ -44,7 +45,8 @@ namespace MvcMovie.Migrations
                     Genre = "Drama",
                     Price = 62,
                     ReleaseDate = new DateTime(1988, 03, 22),
-                    Rating = "NC-17"
+                    Rating = "NC-17",
+                    IsSoldOut = false
                 },
                 new Movie
                 {
@@ -52,7 +54,9 @@ namespace MvcMovie.Migrations
                     Genre = "Komedija",
                     Price = 59,
                     ReleaseDate = new DateTime(2005, 10, 09),
-                    Rating = "PG-13"
+                    Rating = "PG-13",
+                    IsSoldOut = true
+
                 },
                 new Movie
                 {
@@ -60,7 +64,8 @@ namespace MvcMovie.Migrations
                     Genre = "Komedija",
                     Price = 28,
                     ReleaseDate = new DateTime(2008, 3, 8),
-                    Rating = "PG"
+                    Rating = "PG",
+                    IsSoldOut = false
                 },
                 new Movie
                 {
@@ -68,7 +73,8 @@ namespace MvcMovie.Migrations
                     Genre = "Drama",
                     Price = 55,
                     ReleaseDate = new DateTime(2010, 4, 18),
-                    Rating = "R"
+                    Rating = "R",
+                    IsSoldOut = false
                 }
                 );
         }   

@@ -20,6 +20,9 @@ namespace MvcMovie.Models.MovieModels
         public decimal Price { get; set; }
 
         public string Rating { get; set; }
+
+        [Display(Name="Is Sold Out", ShortName="SldOut")]        
+        public bool IsSoldOut { get; set; }
     }
 
 

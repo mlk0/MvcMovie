@@ -159,6 +159,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ActorsController.cs" />
     <Compile Include="Controllers\HelloWorldController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
@@ -281,6 +282,11 @@
     <Content Include="Views\Some\New.cshtml" />
     <Content Include="Views\Some\Details.cshtml" />
     <Content Include="Views\Some\Edit.cshtml" />
+    <Content Include="Views\Actors\Create.cshtml" />
+    <Content Include="Views\Actors\Delete.cshtml" />
+    <Content Include="Views\Actors\Details.cshtml" />
+    <Content Include="Views\Actors\Edit.cshtml" />
+    <Content Include="Views\Actors\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

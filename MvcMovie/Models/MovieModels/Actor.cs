@@ -14,13 +14,16 @@ namespace MvcMovie.Models.MovieModels
         public int ActorId { get; set; }
 
         [StringLength(64), Required]
+        [Display(Name="First Name", ShortName="FN")]
         public string FirstName { get; set; }
 
-        [StringLength(64), Required]
+        [StringLength(64), Required, Display(Name="Last Name")]
         public string LastName { get; set; }
 
+        [Required, Display(Name="Genre")]
         public int GenreId { get; set; }
 
+        [Display(Name="Is Married?")]
         public bool IsMaried { get; set; }
     }
 

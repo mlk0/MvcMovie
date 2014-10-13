@@ -26,7 +26,42 @@ namespace MvcMovie.Migrations
             //      new Person { FullName = "Brice Lambson" },
             //      new Person { FullName = "Rowan Miller" }
             //    );
-            //
+
+
+            context.Genres.AddOrUpdate(
+                c => c.Code,
+                new Genre{ Code="M", Name="Male", Description = "boys" },
+                new Genre { Code = "F", Name = "Female", Description = "girsl" },
+                new Genre { Code = "G", Name = "Gay" },
+                new Genre { Code = "L", Name = "Lezbian" }
+                
+                );
+
+            context.Actors.AddOrUpdate(
+                c => c.FirstName,
+                new Actor
+                {
+                    FirstName = "Vanco",
+                    LastName = "Petrusevski",
+                    IsMaried = true,
+                    GenreId = context.Genres.FirstOrDefault(c=>c.Code=="M").GenreId
+                },
+                new Actor
+                {
+                    FirstName = "Senka",
+                    LastName = "Kolozova",
+                    IsMaried = true,
+                    GenreId = context.Genres.FirstOrDefault(c => c.Code == "F").GenreId
+                },
+                new Actor
+                {
+                    FirstName = "Gjorgi",
+                    LastName = "Kolozov",
+                    IsMaried = true,
+                    GenreId = context.Genres.FirstOrDefault(c => c.Code == "M").GenreId
+                }
+
+            );
 
             context.Movies.AddOrUpdate(
                 c => c.Title,

@@ -198,9 +198,27 @@
     <Compile Include="Migrations\201410090648442_Rating_maxLen5_RegularExpression.Designer.cs">
       <DependentUpon>201410090648442_Rating_maxLen5_RegularExpression.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201410130335524_ActorsAndGenres.cs" />
+    <Compile Include="Migrations\201410130335524_ActorsAndGenres.Designer.cs">
+      <DependentUpon>201410130335524_ActorsAndGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410130339186_ConstrainedGenreName.cs" />
+    <Compile Include="Migrations\201410130339186_ConstrainedGenreName.Designer.cs">
+      <DependentUpon>201410130339186_ConstrainedGenreName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410130345045_GenreDescription.cs" />
+    <Compile Include="Migrations\201410130345045_GenreDescription.Designer.cs">
+      <DependentUpon>201410130345045_GenreDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410130403000_ActorGenreIsSetToGenreId.cs" />
+    <Compile Include="Migrations\201410130403000_ActorGenreIsSetToGenreId.Designer.cs">
+      <DependentUpon>201410130403000_ActorGenreIsSetToGenreId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\MovieModels\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\MovieModels\Actor.cs" />
     <Compile Include="Models\MovieModels\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -298,6 +316,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201410090648442_Rating_maxLen5_RegularExpression.resx">
       <DependentUpon>201410090648442_Rating_maxLen5_RegularExpression.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410130335524_ActorsAndGenres.resx">
+      <DependentUpon>201410130335524_ActorsAndGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410130339186_ConstrainedGenreName.resx">
+      <DependentUpon>201410130339186_ConstrainedGenreName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410130345045_GenreDescription.resx">
+      <DependentUpon>201410130345045_GenreDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410130403000_ActorGenreIsSetToGenreId.resx">
+      <DependentUpon>201410130403000_ActorGenreIsSetToGenreId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

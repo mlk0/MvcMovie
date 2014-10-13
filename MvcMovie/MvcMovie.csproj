@@ -178,6 +178,26 @@
     <Compile Include="Migrations\201410090518529_SoldOutFlag.Designer.cs">
       <DependentUpon>201410090518529_SoldOutFlag.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201410090632159_Title_with_String_Length.cs" />
+    <Compile Include="Migrations\201410090632159_Title_with_String_Length.Designer.cs">
+      <DependentUpon>201410090632159_Title_with_String_Length.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410090634097_Title_made_required.cs" />
+    <Compile Include="Migrations\201410090634097_Title_made_required.Designer.cs">
+      <DependentUpon>201410090634097_Title_made_required.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410090643410_Genre_32MaxLen_RegExAndRequired.cs" />
+    <Compile Include="Migrations\201410090643410_Genre_32MaxLen_RegExAndRequired.Designer.cs">
+      <DependentUpon>201410090643410_Genre_32MaxLen_RegExAndRequired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410090646173_Price_Range1to200_DataType_Currency.cs" />
+    <Compile Include="Migrations\201410090646173_Price_Range1to200_DataType_Currency.Designer.cs">
+      <DependentUpon>201410090646173_Price_Range1to200_DataType_Currency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410090648442_Rating_maxLen5_RegularExpression.cs" />
+    <Compile Include="Migrations\201410090648442_Rating_maxLen5_RegularExpression.Designer.cs">
+      <DependentUpon>201410090648442_Rating_maxLen5_RegularExpression.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -263,6 +283,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201410090518529_SoldOutFlag.resx">
       <DependentUpon>201410090518529_SoldOutFlag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410090632159_Title_with_String_Length.resx">
+      <DependentUpon>201410090632159_Title_with_String_Length.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410090634097_Title_made_required.resx">
+      <DependentUpon>201410090634097_Title_made_required.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410090643410_Genre_32MaxLen_RegExAndRequired.resx">
+      <DependentUpon>201410090643410_Genre_32MaxLen_RegExAndRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410090646173_Price_Range1to200_DataType_Currency.resx">
+      <DependentUpon>201410090646173_Price_Range1to200_DataType_Currency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410090648442_Rating_maxLen5_RegularExpression.resx">
+      <DependentUpon>201410090648442_Rating_maxLen5_RegularExpression.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

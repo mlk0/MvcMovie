@@ -44,5 +44,19 @@ namespace MvcMovie.Controllers
         {
             return View();
         }
+
+        public ActionResult YoMan()
+        {
+            //return View("YoMyMan.chhtml");
+            return View("YoMyMan");
+        }
+
+        public ActionResult Aloha(string name="Kurto", int numTimes=3) 
+        {
+            ViewBag.Name = name;
+            ViewBag.NumberOfItems = numTimes;
+
+            return View();
+        }
 	}
 }

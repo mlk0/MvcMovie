@@ -1,0 +1,28 @@
+﻿@model MvcMovie.Controllers.SampleModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<p>@Html.LabelFor(c => c.SampleId)
+@Html.DisplayTextFor(c => c.SampleId)</p>
+
+<hr />
+<p>
+    @Html.DisplayNameFor(c=>c.SampleId)
+    @Html.DisplayFor(c=>c.SampleId)
+</p>
+
+<p>
+    @Html.DisplayNameFor(c=>c.Name)
+    @Html.DisplayFor(c=>c.Name)
+</p>
+
+
+
+
+@Html.ActionLink("Back to Index", "Index") or 
+@Html.ActionLink("Edit Me", "Edit", new { id=Model.SampleId })
+
+

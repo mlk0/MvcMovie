@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Aloha";
+}
+
+<h2>Aloha</h2>
+
+Hi @ViewBag.Name
+
+@for (int i = 0; i < @ViewBag.NumberOfItems; i++) 
+{    
+   <p>@String.Format("Iteration {0}", i)</p> 
+}
+
+
